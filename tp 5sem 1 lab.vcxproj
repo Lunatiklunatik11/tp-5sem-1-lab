@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a1903f0b-30aa-43ef-ad25-bd0887a2bafa}</ProjectGuid>
-    <RootNamespace>tp5sem1lab</RootNamespace>
+    <ProjectGuid>{85b724a5-68a1-41e3-a487-bd31b1e444ae}</ProjectGuid>
+    <RootNamespace>Test</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="brass.cpp" />
+    <ClCompile Include="keeper.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="orchestra.cpp" />
+    <ClCompile Include="percussion.cpp" />
+    <ClCompile Include="string.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="brass.h" />
+    <ClInclude Include="Exception.h" />
+    <ClInclude Include="keeper.h" />
+    <ClInclude Include="orchestra.h" />
+    <ClInclude Include="percussion.h" />
+    <ClInclude Include="string.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

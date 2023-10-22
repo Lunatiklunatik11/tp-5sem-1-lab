@@ -3,7 +3,7 @@
 
 #include "orchestra.h"
 #include "Exception.h"
-
+#include<string>
 class Keeper {
 private:
     Orchestra** instruments;

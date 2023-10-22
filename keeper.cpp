@@ -3,7 +3,7 @@
 #include "percussion.h"
 #include "brass.h"
 #include <fstream>
-#include <string>
+
 Keeper::Keeper()
 {
     instruments = nullptr;
@@ -13,7 +13,7 @@ Keeper::Keeper()
 
 Keeper::~Keeper()
 {
-    for(int i = 0; i < numInstruments; i++)
+    for (int i = 0; i < numInstruments; i++)
     {
         delete instruments[i];
     }
@@ -24,8 +24,8 @@ Keeper::~Keeper()
 
 void Keeper::add(Orchestra* instrument)
 {
-    Orchestra** newInstruments = new Orchestra*[numInstruments + 1];
-    for(int i = 0; i < numInstruments; i++)
+    Orchestra** newInstruments = new Orchestra * [numInstruments + 1];
+    for (int i = 0; i < numInstruments; i++)
     {
         newInstruments[i] = instruments[i];
     }
@@ -50,11 +50,11 @@ void Keeper::remove(int index)
 {
     if (index >= numInstruments || index < 0)
         throw Exception("There is no such object!\n");
-    Orchestra** newInstruments = new Orchestra*[numInstruments - 1];
+    Orchestra** newInstruments = new Orchestra * [numInstruments - 1];
     int j = 0;
-    for(int i = 0; i < numInstruments; i++)
+    for (int i = 0; i < numInstruments; i++)
     {
-        if(i != index)
+        if (i != index)
         {
             newInstruments[j++] = instruments[i];
         }
@@ -88,19 +88,19 @@ void Keeper::load(std::string filename)
         std::cout << parameters << std::endl;
         if (instrument == "String")
         {
-            String *str;
+            String* str;
             str = new String(parameters);
             this->add(str);
         }
         if (instrument == "Percussion")
         {
-            Percussion *perc;
+            Percussion* perc;
             perc = new Percussion(parameters);
             this->add(perc);
         }
         if (instrument == "Brass")
         {
-            Brass *brass;
+            Brass* brass;
             brass = new Brass(parameters);
             this->add(brass);
         }
